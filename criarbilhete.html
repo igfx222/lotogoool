@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -291,11 +292,6 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6">
-                    <div class="alert alert-warning text-center" role="alert" id="mensagemErro" style="display: none;"></div>
-                </td>
-            </tr>
-            <tr>
                 <td colspan="6" style="background-color: #C62F2B; color: #fff; text-align: center;">
                  <h6 style="text-align: center;"><b>Bolão nº 03 - Concurso nº 1093</b></h6>   
                 </td>
@@ -307,7 +303,7 @@
             </tr>
             <tr>
                 <td  colspan="6">
-                    <h6 id="valorAposta"><b>Valor da Aposta: R$ 0,00</b></h6>
+                    <h6 id="valorAposta"><b>Valor da aposta: R$ 2,00</b></h6>
                 </td>
             </tr>
             <tr>
@@ -322,9 +318,9 @@
                 <td  colspan="6">
                     
 
-                    <span  class="badge" id="qtdSeco" style="background-color: #C62F2B;">Seco(s): 0</span>
-                    <span  class="badge" id="qtdDuplo" style="background-color: #C62F2B;">Duplo(s): 0</span>
-                    <span  class="badge" id="qtdTriplo" style="background-color: #C62F2B;">Triplo(s): 0</span>
+                    <span  class="badge" id="qtdSeco" style="background-color: #C62F2B;">Jogos selecionados: 0</span>
+
+                    
 
                     
                 </td>
@@ -423,7 +419,7 @@
 
         tabela.click();
 
-        valorAposta.innerHTML = `<b>Valor da Aposta: --</b>`
+        valorAposta.innerHTML = `<b>Valor da aposta: R$ 2,00</b>`
     })
 
 
@@ -461,7 +457,7 @@
 
     function mostraQuantidades(qtd){
 
-        qtdSeco.innerHTML = `Seco(s): ${qtd[1]}`;
+        qtdSeco.innerHTML = `Jogos selecionados: ${qtd[1]}`;
         qtdDuplo.innerHTML = `Duplo(s): ${qtd[2]}`;
         qtdTriplo.innerHTML = `Triplo(s): ${qtd[3]}`;
     }
@@ -479,7 +475,7 @@
             
             if(quantidade[2]>0){
                 mensagemErro.style.display = "";
-                mensagemErro.innerHTML = "<b> Selecione apenas uma opção.</b>";
+                aler("Selecione apenas uma opcao");
                 valorAposta.innerHTML = `<b>Valor da Aposta: Inválido.</b>`
                 return false;
             }
@@ -498,12 +494,20 @@
     }
 
         jogar.addEventListener("click",()=>{
+        var xyz = ""
+
+        if(xyz=="sim"){
+            alert("A captação de bilhetes para este bolão está finalizada.")
+            location.reload();
+            return false;
+        }
         
         if(quantidade[2]>0/*|| quantidade[1] == 0*/){
             /*document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!<br>Selecione no máximo dois duplos.</b></center>"
             document.getElementById("teste2").innerHTML = ""*/
-            mensagemErro.innerHTML = "<b> Selecione apenas uma opção.</b>";
+            alert("Jogo inválido.\n\nVocê só pode selecionar um quadrado por jogo.")
+            valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
             return false;
             //alert("Jogo nulo. Por favor, leia as regras!");
             //var verificar_erros == "erro"
@@ -515,9 +519,11 @@
             return false;
             //alert("Jogo nulo. Por favor, leia as regras!");
             //var verificar_erros == "erro"*/
-        mensagemErro.innerHTML = "<b> Selecione apenas uma opção.</b>";
+        alert("Jogo inválido.\n\nVocê só pode selecionar um quadrado por jogo.")
+        valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
             return false;
         }
+        valorAposta.innerHTML = `<b>Valor da aposta: R$ 2,00</b>`
         formulario_final();
     })
 
@@ -547,8 +553,8 @@ var userInputcolor = Array.prototype.slice.call(document.querySelectorAll(".form
         return el.value;
     }).join(', ')
 if(userInputcolor==""){
-    
-    document.getElementById("mensagemErro").innerHTML = "<b>Marque todos os jogos.</b>"
+    alert("certifique-se de selecionar pelo menos 01 (um) jogo.");
+    //document.getElementById("mensagemErro").innerHTML = "<b>Marque todos os jogos.</b>"
             /*document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!</b></center>"
             document.getElementById("teste2").innerHTML = ""*/
