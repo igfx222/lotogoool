@@ -499,23 +499,23 @@
 
         jogar.addEventListener("click",()=>{
         
-        if(quantidade[2]>2/*|| quantidade[1] == 0*/){
+        if(quantidade[2]>0/*|| quantidade[1] == 0*/){
             /*document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!<br>Selecione no máximo dois duplos.</b></center>"
             document.getElementById("teste2").innerHTML = ""*/
-            mensagemErro.innerHTML = "<b> Selecione no máximo dois duplos.</b>";
+            mensagemErro.innerHTML = "<b> Selecione apenas uma opção.</b>";
             return false;
             //alert("Jogo nulo. Por favor, leia as regras!");
             //var verificar_erros == "erro"
         }
-        if(quantidade[3]>1/*|| quantidade[1] == 0*/){
+        if(quantidade[3]>0/*|| quantidade[1] == 0*/){
             /*document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!<br>Selecione apenas um triplo.</b></center>"
             document.getElementById("teste2").innerHTML = ""
             return false;
             //alert("Jogo nulo. Por favor, leia as regras!");
             //var verificar_erros == "erro"*/
-        mensagemErro.innerHTML = "<b> Selecione apenas um triplo.</b>";
+        mensagemErro.innerHTML = "<b> Selecione apenas uma opção.</b>";
             return false;
         }
         formulario_final();
