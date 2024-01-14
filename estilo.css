@@ -22,8 +22,11 @@
             font-size: 20px;
             color: white;
         }
-
+        img{
+                width: 70%;
+        }
         body{
+                margin: 5%;
             font-family: 'Nunito Sans', sans-serif;
             font-size: 0.8em;
         }
