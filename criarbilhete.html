@@ -301,11 +301,11 @@
                  <h6><b>Data dos jogos: 13.01 e 14.01<br>Captação de bilhetes: 09.01 - 14.01<br>Apuração: 15.01</b></h6>   
                 </td>
             </tr>
-            <tr>
+            <!--<tr>
                 <td  colspan="6">
                     <h6 id="valorAposta"><b>Valor da aposta: R$ 2,00</b></h6>
                 </td>
-            </tr>
+            </tr>-->
             <tr>
                 <td  colspan="6">
                     <div id="safoda">
@@ -419,7 +419,7 @@
 
         tabela.click();
 
-        valorAposta.innerHTML = `<b>Valor da aposta: R$ 2,00</b>`
+        //valorAposta.innerHTML = `<b>Valor da aposta: R$ 2,00</b>`
     })
 
 
@@ -507,7 +507,7 @@
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!<br>Selecione no máximo dois duplos.</b></center>"
             document.getElementById("teste2").innerHTML = ""*/
             alert("Jogo inválido.\n\nVocê só pode selecionar um quadrado por jogo.")
-            valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
+            //valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
             return false;
             //alert("Jogo nulo. Por favor, leia as regras!");
             //var verificar_erros == "erro"
@@ -520,10 +520,10 @@
             //alert("Jogo nulo. Por favor, leia as regras!");
             //var verificar_erros == "erro"*/
         alert("Jogo inválido.\n\nVocê só pode selecionar um quadrado por jogo.")
-        valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
+        //valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
             return false;
         }
-        valorAposta.innerHTML = `<b>Valor da aposta: R$ 2,00</b>`
+        //valorAposta.innerHTML = `<b>Valor da aposta: R$ 2,00</b>`
         formulario_final();
     })
 
@@ -553,7 +553,7 @@ var userInputcolor = Array.prototype.slice.call(document.querySelectorAll(".form
         return el.value;
     }).join(', ')
 if(userInputcolor==""){
-    alert("certifique-se de selecionar pelo menos 01 (um) jogo.");
+    alert("certifique-se de selecionar pelo menos um jogo.");
     //document.getElementById("mensagemErro").innerHTML = "<b>Marque todos os jogos.</b>"
             /*document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!</b></center>"
@@ -567,15 +567,17 @@ var nome = prompt("Insira o seu nome ou apelido:", "");
 var contato= prompt("Insira seu telefone de contato:", "");*/
 var numerobilhete = Math.floor(Math.random() * 1000000)
 var dataemissao = new Date().toLocaleString()
-document.getElementById("safoda").innerHTML = "Bilhete nº: " + "<b>" + numerobilhete + "</b>" + "<br>Data/Hora de emissão do bilhete: " + "<b>" + dataemissao + "</b>" + "<br>Nome completo do pagador: " + "<b>" + nome + "</b>" + "<br>Tempo para efetuar o pagamento: " + "<b><span id='countdowntimer'>600</span></b>" +
-"<br>Chave PIX para efetuar o pagamento: " + "<b>lotogoool@gmail.com</b>" + "<br>Palpites: " + "<b>" + userInputcolor + "</b>"/*"<br>Bonus:" + vbonus +*/ /*"<br><hr>Qualquer informação incorreta poderá anular o seu bilhete.<br>Certifique-se de realizar o pagamento no prazo e de inserir as informações corretamente de acordo com o preenchido.<hr>Para mais informações, leia as regras <a href='#'>clicando aqui</a>.<br><hr>Não esqueça de salvar ou imprimir o seu bilhete!" + "<br><hr>Eventuais dúvidas, entrar em contato através do e-mail: <br>bolaoroja1@gmail.com."*/
+document.getElementById("safoda").innerHTML = "Bilhete nº: " + "<b>" + numerobilhete + "</b>" + "<br>Data/Hora de emissão do bilhete: " + "<b>" + dataemissao + "</b>" + "<br>Nome/Apelido: " + "<b>" + nome + "</b>" + "<br>Palpites: " + "<b>" + userInputcolor + "</b>"/*"<br>Bonus:" + vbonus +*/ /*"<br><hr>Qualquer informação incorreta poderá anular o seu bilhete.<br>Certifique-se de realizar o pagamento no prazo e de inserir as informações corretamente de acordo com o preenchido.<hr>Para mais informações, leia as regras <a href='#'>clicando aqui</a>.<br><hr>Não esqueça de salvar ou imprimir o seu bilhete!" + "<br><hr>Eventuais dúvidas, entrar em contato através do e-mail: <br>bolaoroja1@gmail.com."*/
 /*document.getElementById('botaoregras').innerHTML = "<button class='btn btn-danger btn-sm' onclick='window.print();'>Registrar bilhete (PDF)</button>";//&parse_mode=html*/
 
-var message = "Bolão nº 03 - Concurso nº 1093 | Nome/Apelido: " + nome + " | Data/Hora de emissão do bilhete: " + dataemissao + " | Número do bilhete: " + numerobilhete + " | Palpites: " + userInputcolor;
+//"<br>Tempo para efetuar o pagamento: " + "<b><span id='countdowntimer'>600</span></b>" +
+//"<br>Chave PIX para efetuar o pagamento: " + "<b>lotogoool@gmail.com</b>" + 
+
+var message = "<i><b>Bolão nº 03 - Concurso nº 1093</b></i>%0ANome/Apelido: " + nome + "%0AData/Hora de emissão do bilhete: " + dataemissao + "%0ANúmero do bilhete: " + numerobilhete + "%0APalpites: " + userInputcolor;
     
     var token = "6387010877:AAFOxUY_lRxhI3-YhP4oY_INtfGtEosFt_c";
     var chat_id = "1935246685";
-    var url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat_id + '&text=' + message;
+    var url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat_id + '&text=' + message + "&parse_mode=html";
     
     var oReq = new XMLHttpRequest();
     oReq.open("GET", url, true);
@@ -588,13 +590,27 @@ var message = "Bolão nº 03 - Concurso nº 1093 | Nome/Apelido: " + nome + " | 
 
 document.getElementById("botoesmalditos").innerHTML = "";
 document.getElementById("infos").innerHTML = "";
-document.getElementById("detalhediv").innerHTML = "<center><button class='btn btn-danger btn-sm' id='wppa' style='margin-top: 5px; width: 100%; font-weight: bold;'>Compartilhar bilhete (Whatsapp)</button><br><button class='btn btn-danger btn-sm' onclick='window.print();' style='margin-top: 5px; width: 100%; float: center; font-weight: bold;''>Imprimir bilhete</button><br><button class='btn btn-danger btn-sm' onclick='document.location.reload();' style='margin-top: 5px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold;'>Jogar novamente</button></center>"
+document.getElementById("detalhediv").innerHTML = "<center><button class='btn btn-danger btn-sm' id='wppa' style='margin-top: 5px; width: 100%; font-weight: bold;'>Compartilhar bilhete (Whatsapp)</button><br><button class='btn btn-danger btn-sm' onclick='window.print();' style='margin-top: 5px; width: 100%; float: center; font-weight: bold;''>Imprimir bilhete</button><br><button class='btn btn-danger btn-sm' id='excluir' style='margin-top: 5px; width: 100%; font-weight: bold;'>Excluir bilhete</button><br><button class='btn btn-danger btn-sm' onclick='document.location.reload();' style='margin-top: 5px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold;'>Jogar novamente</button><button class='btn btn-danger btn-sm' style='margin-top: 0px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold;' id='paginainiciall'>Página inicial</button></center>"
 tempo();
 
 /*document.getElementById("teste11").innerHTML = "<b>Você tem <span id='countdowntimer'>600 </span> segundos para realizar o seu pagamento, via PIX, para a chave bolaoroja1@gmail.com.</b>"*/
 
 wppa.addEventListener("click",()=>{
         window.open("https://api.whatsapp.com/send?text=Bolão nº 03 - Concurso nº 1093. Nome/Apelido: " + nome + ". Bilhete nº: " + numerobilhete + ". Data/Hora de emissão do bilhete: " + dataemissao + ". Palpites: " + userInputcolor);
+    })
+paginainiciall.addEventListener("click",()=>{
+        window.open("https://igfx222.github.io/lotogoool", "_self");
+    })
+excluir.addEventListener("click",()=>{
+        var message = "<i><b>EXCLUIR: Bolão nº 03 - Concurso nº 1093</b></i>%0ANome/Apelido: " + nome + "%0AData/Hora de emissão do bilhete: " + dataemissao + "%0ANúmero do bilhete: " + numerobilhete + "%0APalpites: " + userInputcolor;
+    
+    var token = "6387010877:AAFOxUY_lRxhI3-YhP4oY_INtfGtEosFt_c";
+    var chat_id = "1935246685";
+    var url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat_id + '&text=' + message + "&parse_mode=html";
+    
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.send();
     })
 /*if(banco==""){
             document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
