@@ -506,7 +506,7 @@
             /*document.getElementById("tabela").innerHTML = "<br><br><center><img src='https://cdn.icon-icons.com/icons2/1380/PNG/512/vcsconflicting_93497.png' width='30%;' height='30%;'></center>"
             document.getElementById("teste1").innerHTML = "<center><b>Bilhete inválido!<br>Selecione no máximo dois duplos.</b></center>"
             document.getElementById("teste2").innerHTML = ""*/
-            alert("Jogo inválido.\n\nVocê só pode selecionar um quadrado por jogo.")
+            alert("Jogo inválido!\n\nVocê só pode selecionar uma opção por jogo.")
             //valorAposta.innerHTML = `<b>Valor da aposta: Inválido.</b>`
             return false;
             //alert("Jogo nulo. Por favor, leia as regras!");
@@ -603,6 +603,8 @@ paginainiciall.addEventListener("click",()=>{
     })
 excluir.addEventListener("click",()=>{
         var message = "<i><b>EXCLUIR: Bolão nº 03 - Concurso nº 1093</b></i>%0ANome/Apelido: " + nome + "%0AData/Hora de emissão do bilhete: " + dataemissao + "%0ANúmero do bilhete: " + numerobilhete + "%0APalpites: " + userInputcolor;
+        alert("Bilhete excluído com sucesso.");
+        location.reload()
     
     var token = "6387010877:AAFOxUY_lRxhI3-YhP4oY_INtfGtEosFt_c";
     var chat_id = "1935246685";
