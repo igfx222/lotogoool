@@ -1,0 +1,424 @@
+
+
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://igfx222.github.io/lotogoool/lotogol.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="http://www.rojadirecta.eu/static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="./estilo.css" rel="stylesheet">
+
+    <title>LOTOGOOOL</title>
+  </head>
+
+  <body class="bg-light" style="margin: 5%;">
+    <div id="estilo">
+        
+    </div>
+    <div class="container">
+        <!-- LOGO -->
+        <div class="row">
+            <div class="col-12">
+                <center><img id='logo' src="./lotogol.png" style="width: 70%; margin-top: 5%;"><hr></center>
+            </div>
+        </div>
+    </div>
+    <!-- Formulário / Tabela -->
+    <form method="get" onsubmit="return formulario_final()"></form>
+    <table class="table table-bordered table-striped " id="tabela">
+        <tbody>
+            <tr style="border: 1px solid black;">
+                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;">Nº</td>
+                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;"></td>
+                <td style="text-align: float; color: black; background-color: #50C878; border-color: black;">CASA</td>
+                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;">EMPATE</td>
+                <td style="text-align: right; color: black; background-color: #50C878; border-color: black;">FORA</td>
+                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;"></td>
+            </tr>
+            <tr>
+                <td class="fit-check">1</td>
+                <td class="fit-check">
+                    <input class="form-check-input" type="checkbox" value="1-C" id="AC">
+                </td>
+                <td style="max-width: 46px;">
+                    M. United-ING 
+                </td>
+                <td class="fit-check">
+                    <center><input class="form-check-input" type="checkbox" value="1-E" id="AE"></center>
+                </td>
+                <td class="text-end"  style="max-width: 46px;">
+                    Tottenham-ING
+                </td>
+                <td class="fit-check">
+                    <input class="form-check-input" type="checkbox" value="1-F" id="AF">
+                </td>
+            </tr>
+            <tr>
+                <td class="fit-check">2</td>
+                <td class="fit-check">
+                    <input class="form-check-input" type="checkbox" value="2-C" id="BC">
+                </td>
+                <td style="max-width: 46px;">
+                    Monza-ITA
+                </td>
+                <td class="fit-check">
+                    <center><input class="form-check-input" type="checkbox" value="2-E" id="BE"></center>
+                </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Inter-ITA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="2-F" id="BF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">3</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="3-C" id="CC">
+            </td>
+            <td style="max-width: 46px;">
+                Rennes-FRA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="3-E" id="CE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Nice-FRA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="3-F" id="CF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">4</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="4-C" id="DC">
+            </td>
+            <td style="max-width: 46px;">
+                Bétis-ESP
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="4-E" id="DE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Granada-ESP
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="4-F" id="DF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">5</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="5-C" id="EC">
+            </td>
+            <td style="max-width: 46px;">
+                Everton-ING
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="5-E" id="EE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Aston Villa-ING
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="5-F" id="EF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">6</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="6-C" id="FC">
+            </td>
+            <td style="max-width: 46px;">
+                Lazio-ITA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="6-E" id="FE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Lecce-ITA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="6-F" id="FF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">7</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="7-C" id="GC">
+            </td>
+            <td style="max-width: 46px;">
+                Almería-ESP
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="7-E" id="GE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Girona-ESP
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="7-F" id="GF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">8</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="8-C" id="HC">
+            </td>
+            <td style="max-width: 46px;">
+                Brest-FRA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="8-E" id="HE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Montpellier-FRA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="8-F" id="HF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">9</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="9-C" id="IC">
+            </td>
+            <td style="max-width: 46px;">
+                Cagliari-ITA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="9-E" id="IE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Bologna-ITA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="9-F" id="IF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">10</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="10-C" id="JC">
+            </td>
+            <td style="max-width: 46px;">
+                Cádiz-ESP
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="10-E" id="JE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Valencia-ESP
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="10-F" id="JF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">11</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="11-C" id="KC">
+            </td>
+            <td style="max-width: 46px;">
+                Milan-ITA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="11-E" id="KE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Roma-ITA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="11-F" id="KF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">12</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="12-C" id="LC">
+            </td>
+            <td style="max-width: 46px;">
+                Lille-FRA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="12-E" id="LE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Lorient-FRA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="12-F" id="LF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">13</td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="13-C" id="MC">
+            </td>
+            <td style="max-width: 46px;">
+                Lens-FRA
+            </td>
+            <td class="fit-check">
+                <center><input class="form-check-input" type="checkbox" value="13-E" id="ME"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                PSG-FRA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="13-F" id="MF">
+            </td>
+          </tr>
+          <tr>
+            <td class="fit-check">14</td>
+            <td class="fit-check">
+               <input class="form-check-input" type="checkbox" value="14-C" id="NC">
+            </td>
+            <td style="max-width: 46px;">
+                Fiorentina-ITA
+            </td>
+            <td class="fit-check">
+                <!--<input class="form-check-input" type="checkbox">-->
+                <center><input class="form-check-input" type="checkbox" value="14-E" id="NE"></center>
+            </td>
+            <td class="text-end"  style="max-width: 46px;">
+                Udinese-ITA
+            </td>
+            <td class="fit-check">
+                <input class="form-check-input" type="checkbox" value="14-F" id="NF">
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" style="background-color: #50C878; border: 1px solid black; color: black; text-align: center;">
+                 <h6 style="text-align: center;"><b>Bolão nº 03 - Concurso nº 1093</b></h6>   
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                 <h6><b>Data dos jogos: 13.01 e 14.01<br>Captação de bilhetes: 09.01 - 14.01<br>Apuração: 15.01</b></h6>   
+                </td>
+            </tr>
+            <!--<tr>
+                <td  colspan="6">
+                    <h6 id="valorAposta"><b>Valor da aposta: R$ 2,00</b></h6>
+                </td>
+            </tr>-->
+            
+            <tr id="infos">
+                
+                <td  colspan="6">
+                    
+
+                    <span  class="badge" id="qtdSeco" style="background-color: #50C878; border: 1px solid black; color: black;">Jogos selecionados: 0</span>
+
+                    
+
+                    
+                </td>
+            </tr>
+            
+            
+            
+                                  <tr>
+                                    
+                    <td colspan="6" id="">
+                        <div class="d-flex justify-content-between" id="botoesmalditos">
+                            <div id="botaoregras">
+                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="voltar" onclick="history.back();">Voltar</button>
+                            </div>
+                            <div id="botaoajuda">
+                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="detalhe">Ajuda</button>
+                            </div>
+                            <div id="botaolimpar">
+                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="limparSelecao">Limpar</button>
+                            </div>
+                            <div id="botaojogar">
+                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="jogar">Jogar</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" id="teste11">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="safoda">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="detalhediv">
+                
+            </div>
+        </div>
+                    </td>
+                </tr>
+
+        </tfoot>
+      </table>
+        <div class="row">
+            <div class="col-12" id="teste2">
+                
+            </div>
+        </div>
+
+    </div>
+</form>
+  </body>
+    <script type="text/javascript">
+   function get(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+}
+
+var getnumero = get('n');
+alert(getnumero);
+
+var getnome = get('u');
+alert(getnome);
+
+var getdata = get('d');
+alert(getdata);
+
+var getpalpite = get('p');
+alert(getpalpite);
+
+var getpalpite2=getpalpite.replace(/ /g,"#");
+var getpalpite3="#" + getpalpite2;
+alert(getpalpite3)
+
+
+document.getElementById("botoesmalditos").innerHTML = ""
+
+
+document.getElementById("infos").innerHTML = ""
+
+
+document.getElementById("safoda").innerHTML = "Bilhete nº: " + "<b>" + getnumero + "</b>" + "<br>Data/Hora de emissão do bilhete: " + "<b>" + getdata + "</b>" + "<br>Nome/Apelido: " + "<b>" + getnome
+
+
+document.getElementById("detalhediv").innerHTML = "<center><button class='btn btn-danger btn-sm' onclick='copiar()' style='margin-top: 5px; width: 100%; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Copiar o link deste bilhete</button><br><button class='btn btn-danger btn-sm' onclick='window.print();' style='margin-top: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;''>Imprimir este bilhete<br><button class='btn btn-danger btn-sm' onclick='document.location.reload();' style='margin-top: 5px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Gerar outro bilhete</button><button class='btn btn-danger btn-sm' style='margin-top: 0px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;' id='paginainiciall'>Página inicial</button></center>"
+
+document.getElementById("estilo").innerHTML = "<style>" + getpalpite3 + "{background-color: red; cursor: pointer;} .form-check-input:checked {background-color: white; cursor: no-drop;}" + "</style>"
+
+function copiar() {
+    var dummy = document.createElement('input'),
+    text = window.location.href;
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    alert("Link copiado com sucesso.");
+}
+  </script>
+</html>
