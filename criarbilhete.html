@@ -16,7 +16,32 @@
 
     <title>LOTOGOOOL</title>
   </head>
-  <body class="bg-light" style="margin: 5%;">
+  <style type="text/css">
+      .loader{
+    display: block;
+    position: relative;
+    height: 25px;
+    width: 200px;
+    background: #black;
+    overflow: hidden;
+    border: 1px solid black;
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #50C878;
+    animation: 6s prog ease-in infinite;
+  }
+  @keyframes prog {
+    to  {   width: 100%;}
+  }
+  
+  </style>
+  <body class="bg-light" style="margin: 5%;" id="corpinho">
     <div class="container">
         <!-- LOGO -->
         <div class="row">
@@ -571,7 +596,9 @@ var uservalue = Array.prototype.slice.call(document.querySelectorAll(".form-chec
 var nome = prompt("Insira o seu nome ou apelido:", "");
 /*var banco = prompt("Insira o nome do banco:", "");
 var contato= prompt("Insira seu telefone de contato:", "");*/
-var numerobilhete = Math.floor(Math.random() * 1000000)
+const d = new Date();
+let numerobilhete = d.valueOf();
+//var numerobilhete = Math.floor(Math.random() * 1000000)
 var dataemissao = new Date().toLocaleString()
 //document.getElementById("safoda").innerHTML = "Bilhete nº: " + "<b>" + numerobilhete + "</b>" + "<br>Data/Hora de emissão do bilhete: " + "<b>" + dataemissao + "</b>" + "<br>Nome/Apelido: " + "<b>" + nome + "</b>" + "<br>Palpites: " + "<b>" + userInputcolor + "</b>"/*"<br>Bonus:" + vbonus +*/ /*"<br><hr>Qualquer informação incorreta poderá anular o seu bilhete.<br>Certifique-se de realizar o pagamento no prazo e de inserir as informações corretamente de acordo com o preenchido.<hr>Para mais informações, leia as regras <a href='#'>clicando aqui</a>.<br><hr>Não esqueça de salvar ou imprimir o seu bilhete!" + "<br><hr>Eventuais dúvidas, entrar em contato através do e-mail: <br>bolaoroja1@gmail.com."*/
 /*document.getElementById('botaoregras').innerHTML = "<button class='btn btn-danger btn-sm' onclick='window.print();'>Registrar bilhete (PDF)</button>";//&parse_mode=html*/
@@ -592,8 +619,12 @@ var message = "<i><b>Bolão nº 03 - Concurso nº 1093</b></i>%0ANome/Apelido: "
     const audioElement = new Audio("https://web.telegram.org/a/notification.mp3");
     audioElement.play();
 
+    document.getElementById("corpinho").innerHTML = "<center><span class='loader'></span></center>"
 
-window.open('https://igfx222.github.io/lotogoool/bilhete.html?n=' + numerobilhete + "&u=" + nome + "&d=" + dataemissao + "&p=" + uservalue, "_self");
+setTimeout(function() {
+    window.open('https://igfx222.github.io/lotogoool/bilhete.html?n=' + numerobilhete + "&u=" + nome + "&d=" + dataemissao + "&p=" + uservalue, "_self");
+}, 5555);
+
 //document.getElementById("botoesmalditos").innerHTML = "";
 //document.getElementById("infos").innerHTML = "";
 //document.getElementById("detalhediv").innerHTML = "<center><button class='btn btn-danger btn-sm' id='wppa' style='margin-top: 5px; width: 100%; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Compartilhar bilhete (Whatsapp)</button><br><button class='btn btn-danger btn-sm' onclick='window.print();' style='margin-top: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;''>Imprimir bilhete</button><br><button class='btn btn-danger btn-sm' id='excluir' style='margin-top: 5px; width: 100%; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Excluir bilhete</button><br><button class='btn btn-danger btn-sm' onclick='document.location.reload();' style='margin-top: 5px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Jogar novamente</button><button class='btn btn-danger btn-sm' style='margin-top: 0px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;' id='paginainiciall'>Página inicial</button></center>"
