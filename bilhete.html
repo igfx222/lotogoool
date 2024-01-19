@@ -18,29 +18,19 @@
     <title>LOTOGOOOL</title>
   </head>
 
-  <body class="bg-light" style="margin: 5%;" id="corpinho">
-    <div id="estilo">
-        
-    </div>
-    <div class="container">
-        <!-- LOGO -->
-        <div class="row">
-            <div class="col-12">
-                <center><img id='logo' src="./lotogol.png" style="width: 70%; margin-top: 5%;"><hr></center>
-            </div>
-        </div>
-    </div>
+  <body class="bg-light" style="margin-left: 3%; margin-right: 3%; margin-top: 3%;" id="corpinho">
+
     <!-- Formulário / Tabela -->
     <form method="get" onsubmit="return formulario_final()"></form>
     <table class="table table-bordered table-striped " id="tabela">
         <tbody>
             <tr style="border: 1px solid black;">
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;">Nº</td>
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;"></td>
-                <td style="text-align: float; color: black; background-color: #50C878; border-color: black;">CASA</td>
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;">EMPATE</td>
-                <td style="text-align: right; color: black; background-color: #50C878; border-color: black;">FORA</td>
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;"></td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;">Nº</td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;"></td>
+                <td style="text-align: float; color: white; background-color: rgb(230, 34, 77); border-color: black;">CASA</td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;">EMPATE</td>
+                <td style="text-align: right; color: white; background-color: rgb(230, 34, 77); border-color: black;">FORA</td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;"></td>
             </tr>
             <tr>
                 <td class="fit-check">1</td>
@@ -298,8 +288,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6" style="background-color: #50C878; border: 1px solid black; color: black; text-align: center;">
-                 <h6 style="text-align: center;"><b>Bolão nº 03 - Concurso nº 1093</b></h6>   
+                <td colspan="6" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white; text-align: center;">
+                 <b style="text-align: center;">Bolão nº 03 - Concurso nº 1093</b>   
                 </td>
             </tr>
             <tr>
@@ -395,9 +385,9 @@ document.getElementById("infos").innerHTML = ""
 document.getElementById("safoda").innerHTML = "Bilhete nº: " + "<b>" + getnumero + "</b>" + "<br>Data/Hora de emissão do bilhete: " + "<b>" + getdata + "</b>" + "<br>Nome/Apelido: " + "<b>" + getnome
 
 
-document.getElementById("detalhediv").innerHTML = "<center><button class='btn btn-danger btn-sm' onclick='copiar()' style='margin-top: 5px; width: 100%; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Copiar o link deste bilhete</button><br><button class='btn btn-danger btn-sm' onclick='window.print();' style='margin-top: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;''>Imprimir este bilhete<br><button class='btn btn-danger btn-sm' onclick='document.location.reload();' style='margin-top: 5px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;'>Gerar outro bilhete</button><button class='btn btn-danger btn-sm' style='margin-top: 0px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;' id='paginainiciall'>Página inicial</button></center>"
+document.getElementById("detalhediv").innerHTML = "<center><button class='btn btn-danger btn-sm' onclick='copiar()' style='margin-top: 5px; width: 100%; font-weight: bold; background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;'>Copiar o link deste bilhete</button><br><button class='btn btn-danger btn-sm' onclick='window.print();' style='margin-top: 5px; width: 100%; float: center; font-weight: bold; background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;''>Imprimir este bilhete<br><button class='btn btn-danger btn-sm' onclick='document.location.reload();' style='margin-top: 5px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;'>Gerar outro bilhete</button><button class='btn btn-danger btn-sm' style='margin-top: 0px; margin-bottom: 5px; width: 100%; float: center; font-weight: bold; background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;' id='paginainiciall'>Página inicial</button></center>"
 
-document.getElementById("estilo").innerHTML = "<style>" + getpalpite3 + "{background-color: red; cursor: pointer;} .form-check-input:checked {background-color: white; cursor: no-drop;}" + "</style>"
+document.getElementById("estilo").innerHTML = "<style>" + getpalpite3 + "{background-color: rgb(230, 34, 77); cursor: pointer;} .form-check-input:checked {background-color: white; cursor: no-drop;}" + "</style>"
 
 function copiar() {
     var dummy = document.createElement('input'),
