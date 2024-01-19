@@ -1,6 +1,5 @@
-        input:hover{
-            border: 1px solid yellow;
-        }
+
+        
         .badge {
             display: inline-block;
             padding: .35em .65em;
@@ -15,8 +14,7 @@
         }
 
         .form-check-input:checked {
-                background-color: red;
-                border-color: red;
+                background-color: rgb(230, 34, 77);
         }
 
         .bg-color-loteca{
@@ -48,12 +46,12 @@
         color: #212529;
         vertical-align: top;
         font-weight: bold;
-        font-size: 13px;
+        font-size: 14px;
         border-color: #8e8e8ee0;
         }
         .form-check-input[type=checkbox] {
             border-radius: 186px;
-            border: 1px solid #50C878;
+            border: 1px solid rgb(230, 34, 77);
 
         }
         .table-bordered>:not(caption)>*>* {
