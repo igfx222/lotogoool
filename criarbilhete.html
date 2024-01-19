@@ -41,26 +41,19 @@
   }
   
   </style>
-  <body class="bg-light" style="margin: 5%;" id="corpinho">
-    <div class="container">
-        <!-- LOGO -->
-        <div class="row">
-            <div class="col-12">
-                <center><img id='logo' src="./lotogol.png" style="width: 70%; margin-top: 5%;"><hr></center>
-            </div>
-        </div>
-    </div>
+  <body class="bg-light" style="margin-left: 3%; margin-right: 3%; margin-top: 3%;" id="corpinho">
     <!-- Formulário / Tabela -->
     <form method="get" onsubmit="return formulario_final()"></form>
+    <div id="igor">
     <table class="table table-bordered table-striped " id="tabela">
-        <tbody>
+        <tbody >
             <tr style="border: 1px solid black;">
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;">Nº</td>
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;"></td>
-                <td style="text-align: float; color: black; background-color: #50C878; border-color: black;">CASA</td>
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;">EMPATE</td>
-                <td style="text-align: right; color: black; background-color: #50C878; border-color: black;">FORA</td>
-                <td style="text-align: center; color: black; background-color: #50C878; border-color: black;"></td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;">Nº</td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;"></td>
+                <td style="text-align: float; color: white; background-color: rgb(230, 34, 77); border-color: black;">CASA</td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;">EMPATE</td>
+                <td style="text-align: right; color: white; background-color: rgb(230, 34, 77); border-color: black;">FORA</td>
+                <td style="text-align: center; color: white; background-color: rgb(230, 34, 77); border-color: black;"></td>
             </tr>
             <tr>
                 <td class="fit-check">1</td>
@@ -318,8 +311,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6" style="background-color: #50C878; border: 1px solid black; color: black; text-align: center;">
-                 <h6 style="text-align: center;"><b>Bolão nº 03 - Concurso nº 1093</b></h6>   
+                <td colspan="6" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white; text-align: center;">
+                 <b style="text-align: center;">Bolão nº 03 - Concurso nº 1093</b>   
                 </td>
             </tr>
             <tr>
@@ -338,7 +331,7 @@
                 <td  colspan="6">
                     
 
-                    <span  class="badge" id="qtdSeco" style="background-color: #50C878; border: 1px solid black; color: black;">Jogos selecionados: 0</span>
+                    <span  class="badge" id="qtdSeco" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white;">Jogos selecionados: 0</span>
 
                     
 
@@ -352,16 +345,16 @@
                     <td colspan="6" id="">
                         <div class="d-flex justify-content-between" id="botoesmalditos">
                             <div id="botaoregras">
-                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="voltar" onclick="history.back();">Voltar</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;" id="voltar" onclick="history.back();">Voltar</button>
                             </div>
                             <div id="botaoajuda">
-                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="detalhe">Ajuda</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;" id="detalhe">Ajuda</button>
                             </div>
                             <div id="botaolimpar">
-                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="limparSelecao">Limpar</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;" id="limparSelecao">Limpar</button>
                             </div>
                             <div id="botaojogar">
-                                <button class="btn btn-danger btn-sm" style="background-color: #50C878; border: 1px solid black; color: black; font-weight: bold;" id="jogar">Jogar</button>
+                                <button class="btn btn-danger btn-sm" style="background-color: rgb(230, 34, 77); border: 1px solid black; color: white; font-weight: bold;" id="jogar">Jogar</button>
                             </div>
                         </div>
                         <div class="row">
@@ -391,6 +384,7 @@
         </div>
 
     </div>
+</div>
 </form>
   </body>
   <script type="text/javascript">
